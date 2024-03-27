@@ -69,9 +69,12 @@ nav h2 a {
 nav h2 a:hover, nav h2 a:focus, .links-menu a:hover, .links-menu a:focus{
     background-color: var(--cor-intermediaria);
 }
+
 /*Estilos para a lista ul contida em nav*/
 .links-menu {
     list-style: none;
+    /*Aqui faremos com que os links iniciem ocultos, receberá tratamento com JavaScript para modificar a funcionalidade para quando acionado o boão MENU*/
+    display: none;
 }
 
 
