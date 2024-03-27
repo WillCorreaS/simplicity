@@ -130,10 +130,17 @@ nav h2 a:hover, nav h2 a:focus, .links-menu a:hover, .links-menu a:focus{
 
 .destaque h2, .destaque p {
     text-align: center;
-    font-size: 1.2rem;
     color: var(--cor-clara);
 }
 
-.destaque h2{
-    font-size: 4rem;
+
+/* Usando responsividade sem utilizar @media Querie  - 'clamp(tamanho minimo, tamanho ideal, tamanho máximo)'*/
+
+
+.destaque h2 {
+    font-size: clamp(3rem, 10vw, 7rem);
+}
+
+.destaque p {
+    font-size: clamp(1rem, 3vw, 5rem);
 }
