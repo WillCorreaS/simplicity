@@ -48,7 +48,7 @@ h1 a {
     color: var(--cor-clara);
     background-color: var(--cor-escura);
     border-radius: 3px;
-    padding: 0.3rem 0.1rem ;
+    padding: 0.2rem 0.8rem ;
     margin-left: 1rem;
 }
 
@@ -62,7 +62,7 @@ nav h2 a {
     color: var(--cor-escura);
     font-size: 1.2rem;
     /*background-color: burlywood;*/
-    padding: 1rem;
+    padding: 1.5rem;
     display: inline-block;
 }
 
@@ -102,4 +102,32 @@ nav h2 a:hover, nav h2 a:focus, .links-menu a:hover, .links-menu a:focus{
     left: 0;
     right: 0;
     background-color: var(--cor-clara);
+}
+
+
+/* Exercícios:
+1) criar uma regra para formatar o destaque da seguinte forma:
+-altura 500px
+-Imagem de fundo
+-Imagem de fundo deve ficar parada
+-Alinhamento centralizado e usar 'column' para ficar um sobre o outro
+
+
+2)Criar Css para formatar o h2 e o p contidos em 'destaque'. O textos devem ficar centralizados
+(text-align) e com a var(cor clara)
+
+*/
+
+.destaque {
+    height: 500px;
+    background-image: url(/imagens/fundo-destaque.jpg);
+    color: var(--cor-clara);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.destaque h2{
+    font-size: 4rem;
 }
