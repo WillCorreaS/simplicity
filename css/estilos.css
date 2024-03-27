@@ -131,11 +131,10 @@ nav h2 a:hover, nav h2 a:focus, .links-menu a:hover, .links-menu a:focus{
 .destaque h2, .destaque p {
     text-align: center;
     color: var(--cor-clara);
+
 }
 
-
 /* Usando responsividade sem utilizar @media Querie  - 'clamp(tamanho minimo, tamanho ideal, tamanho máximo)'*/
-
 
 .destaque h2 {
     font-size: clamp(3rem, 10vw, 7rem);
@@ -144,3 +143,25 @@ nav h2 a:hover, nav h2 a:focus, .links-menu a:hover, .links-menu a:focus{
 .destaque p {
     font-size: clamp(1rem, 3vw, 5rem);
 }
+
+/* Etapa 1) Criar regra de animação */
+@keyframes animaDestaque {
+    /* o início */
+    from {
+        opacity: 0;
+        transform: translateY(-600px);
+    }
+
+    /* onde termina */
+    to{
+        opacity: 1;
+    }
+}
+
+.destaque h2, .destaque p {
+        /* Etapa 2) Aplicando a animação no texto destaque */
+
+        animation-name: animaDestaque;
+        animation-duration: 2s;
+}
+
