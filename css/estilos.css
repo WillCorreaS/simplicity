@@ -88,3 +88,18 @@ nav h2 a:hover, nav h2 a:focus, .links-menu a:hover, .links-menu a:focus{
     justify-content: center;
     align-items: center;
 }
+
+/*A seguinte regra será usada apenas quando o menu seletor estiver aberto*/
+
+.links-menu.aberto{
+    /* Ativando o flex fazemos o menu voltar a aparecer */
+    display: flex;
+    /* Com 'column' Fazemos com que fique posicionado um elemento sobre o outro */
+    flex-direction: column;
+
+    /* Ativando 'position:absolute' e ajustamos a posição final dos links usando propriedades de coordenadas*/
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: var(--cor-clara);
+}
