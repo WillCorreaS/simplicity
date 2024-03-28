@@ -231,3 +231,20 @@ footer img{
 }
 
 hr{ opacity: 0;}
+
+
+/* regras para página de Produtos, Serviços e Contato */
+
+.conteudo {
+    background-color: var(--cor-intermediaria);
+    padding: 0.5rem;
+    border-radius: 8px;
+}
+
+.conteudo h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    text-shadow: #00000041 1px 1px 8px;
+    border-bottom:solid 2px;
+    margin-bottom: 1rem;
+}
