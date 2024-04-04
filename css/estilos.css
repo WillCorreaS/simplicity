@@ -51,12 +51,18 @@ h1 a {
     padding: 0.2rem 0.8rem ;
     margin-left: 1rem;
 }
-
-header{
+ /*alterar apenas o limitador dentro de header*/
+header .limitador{
     height: 12vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+header{
+    position: sticky;
+    top: 0;
+    background-color: var(--cor-clara);
 }
 
 nav h2 a {
@@ -295,6 +301,28 @@ tr:nth-child(odd){
 td:last-child::before {
     content:"R$";
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*Exercícios*/
 
