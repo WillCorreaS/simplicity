@@ -63,7 +63,9 @@ header{
     position: sticky;
     top: 0;
     background-color: var(--cor-clara);
+    z-index: 10;
 }
+
 
 nav h2 a {
     color: var(--cor-escura);
@@ -303,6 +305,29 @@ td:last-child::before {
     content:"R$";
 }
 
+/*PAGINA SERVIÇOS*/
+
+.galeria{
+    /* background-color: aqua; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin:auto;
+    gap: 10px;
+}
+
+.galeria img {
+    border-radius: 50%;
+    filter: brightness(140%) blur(1px);
+    box-shadow: black 1px 1px 10px;
+}
+
+.galeria img:hover, .galeria img:focus{
+    transition: 0.3s;
+    transform: scale(1.1);
+    border-radius: 10%;
+    filter: brightness(110%) blur(0px);
+}
 
 
 
