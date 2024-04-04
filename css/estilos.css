@@ -289,3 +289,32 @@ th, td:nth-child(3){
 tr:nth-child(odd){
     background-color: var(--cor-clara);
 }
+
+
+
+td:last-child::before {
+    content:"R$";
+}
+
+/*Exercícios*/
+
+@media screen and (min-width: 570px){
+    
+    nav h2 { display: none;}
+
+    .links-menu{
+    display: flex;
+    }
+
+    .links-menu li {width: 100%;}
+
+    nav {width: 60%;}
+
+    .front-end img{height: 150px;}
+
+}
+
+@media screen and (min-width: 1000px){
+    html{font-size: 18px;}
+    .limitador{width: 1000px;}
+}
