@@ -29,7 +29,25 @@ botaoBuscar.addEventListener("click", function(event){
         return;
     } else{
         cepInformado = campoCep.value;
-        console.log(cepInformado);
+        /*AJAX (assyncronous javascript and XML)
+        
+        É uma tecnica de comunicação de Transmição/recebimento de dados que permite o processamento em conjunto com APIs (ou Wen Services)
+        */
+
+        /*###############  COMO UTILIZAR  ############*/
+
+        //ETAPA 1: preparar a URL da API com o CEP informado
+
+        
+        //ETAPA 2: acessar a API (com url) e aguardar o retorno dela
+
+
+        //ETAPA 3: extrair os dados da resposta da API em formato JASON
+        
+
+        //ETAPA 4:lidar com os dados (em caso de erro ou sucesso)
+
+    
     }
 })
 
