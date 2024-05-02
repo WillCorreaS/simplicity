@@ -343,6 +343,7 @@ input, selec, textarea {
     padding: 4px;
     height: 40px;
     border-radius: 4px;
+    background-color: rgb(255, 255, 255);
 }
 
 textarea{height: auto;}
@@ -388,6 +389,16 @@ button:hover, button:focus {
 
 }
 
+#cep{width: 60%;}
+
+#buscar{
+    width: 39%;
+    padding: 12px;
+}
+
+.campos-restantes{
+    display: none;
+}
 
 
 

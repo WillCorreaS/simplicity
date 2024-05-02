@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato - Simplicity</title>
     <link rel="stylesheet" href="css/estilos.css">
 </head>
+
 <body>
     <header>
         <div class="limitador">
@@ -21,12 +23,14 @@
             </nav>
         </div>
     </header>
-    
+
     <main>
         <article class="conteudo limitador">
             <h2>Contato</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, quo esse laborum molestias facilis assumenda libero rerum! Debitis facere assumenda in reiciendis quae, aut temporibus porro? Inventore vero quis voluptatem?</p>
-            
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, quo esse laborum molestias facilis
+                assumenda libero rerum! Debitis facere assumenda in reiciendis quae, aut temporibus porro? Inventore
+                vero quis voluptatem?</p>
+
             <!-- Método: maneira como os dados serão
             transmitidos. Opções: get (envia pela URL), 
             post (envia no corpo do formulário [mais seguro para
@@ -51,6 +55,30 @@
                     <label for="telefone">Telefone:</label>
                     <input type="tel" name="telefone" id="telefone">
                 </div>
+
+                <!-- INÍCIO HTML PARA CEP/ENDEREÇO -->
+                <div> 
+                    <!-- Usamos 'inputmode="numeric"' para que o teclado virtual mosre numeros e para que não seja mostrado botões adicionais no navegador desktop -->
+                    <label for="cep">CEP: <br><span id="status"></span></label>
+                    <div id="area-do-cep"> <input inputmode="numeric" placeholder="Somente números" type="text" id="cep" name="cep"
+                    required> <br> <button id="buscar">Buscar</button></div>
+                </div>
+
+
+                <div class="campos-restantes"> <label for="endereco">Endereço:</label><input type="text" id="endereco" name="endereco" size="30"></div>
+
+                <div class="campos-restantes"> <label for="bairro">Bairro:</label> <input type="text" id="bairro"
+                        name="bairro"></div>
+
+                <div class="campos-restantes"> <label for="cidade">Cidade:</label> <input type="text" id="cidade"
+                        name="cidade"></div>
+
+                <div class="campos-restantes"> <label for="estado">Estado:</label> <input type="text" id="estado"
+                        name="estado"></div>
+                        
+                        <!-- /FIM HTML PARA CEP/ENDEREÇO -->
+
+
 
                 <div>
                     <label for="assunto">Assunto:</label>
@@ -78,12 +106,13 @@
 
         </article>
     </main>
-    
+
     <footer>
         <p>Simplicity é um site fictício desenvolvido
-        para fins educacionais &copy; <time>2024</time> </p>
+            para fins educacionais &copy; <time>2024</time> </p>
     </footer>
 
     <script src="script.js"></script>
 </body>
+
 </html>
