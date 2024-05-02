@@ -331,14 +331,62 @@ td:last-child::before {
 
 
 
+/*############### ESTILIZAÇÃO DA PÁGINA CONTATOS ######################*/
+form{
+    /* background-color: red; */
+    max-width: 500px;
+    margin: auto;
+}
 
+input, selec, textarea {
+    border: none;
+    padding: 4px;
+    height: 40px;
+    border-radius: 4px;
+}
 
+textarea{height: auto;}
 
+form div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
 
+label {
+    /* background-color: yellow; */
+    font-size: 0.9rem;
+    font-weight: bold;
+    width: 30%;
 
+}
 
+/*SELETOR COM EXCESSÃO :not(o que vai ter excessão)*/
+form div *:not(label){
+    width: 70%;
+}
 
+form button {
+    background-color:var(--cor-escura);
+    color: var(--cor-clara);
+    border: none;
+    font-weight: bold;
+    padding: 1rem 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: var(--cor-escura) 0 0 2px;
+    transition: 0.3s;
+}
 
+button:hover, button:focus { 
+    color: var(--cor-escura);
+    background-color: var(--cor-clara);
+    box-shadow: var(--cor-escura) 0 0 2px;
+    font-size: 0.9rem;
+    transition: 0.3s;
+
+}
 
 
 
