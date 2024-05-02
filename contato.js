@@ -15,7 +15,7 @@ const mensagem = document.querySelector("#mensagem");
 
 
 // Detectando quando o botão CEP for acionado
-botaoBuscar.addEventListener("click", function(event){
+botaoBuscar.addEventListener("click", async function(event){
     
     /*'event.preventDefault();' Anula comportamento padrão de recattegar página quando um botão, link ou formulário for acionado*/
     event.preventDefault();
@@ -37,17 +37,35 @@ botaoBuscar.addEventListener("click", function(event){
         /*###############  COMO UTILIZAR  ############*/
 
         //ETAPA 1: preparar a URL da API com o CEP informado
-
+        let url = `https://viacep.com.br/ws/${cepInformado}/json/`;
         
         //ETAPA 2: acessar a API (com url) e aguardar o retorno dela
-
+        const resposta = await fetch(url);
 
         //ETAPA 3: extrair os dados da resposta da API em formato JASON
-        
+        const dados = await resposta.json()
+        console.log(dados);
 
         //ETAPA 4:lidar com os dados (em caso de erro ou sucesso)
+        if ("erro" in dados) {
+            mensagemStatus.textContent = "Cep inexistente.";
+            mensagemStatus.style.color = "red"
+        } else {
+            mensagemStatus.textContent = "Cep encontrado.";
+            mensagemStatus.style.color = "blue"
+        }
 
-    
+        const camposRestantes = document.querySelectorAll(".campos-restantes");
+        //remover classe de cada elemento do HTML utilizando um LOOP
+        for(const campo of camposRestantes){
+            campo.classList.remove("campos-restantes")
+        }
+        
+        campoEndereco.value = dados.logradouro;
+        campoBairro.value = dados.bairro;
+        campoCidade.value = dados.localidade;
+        campoEstado.value = dados.uf;
+
     }
 })
 
