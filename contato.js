@@ -37,7 +37,7 @@ botaoBuscar.addEventListener("click", async function(event){
         return;
     } else{
         cepInformado = campoCep.value;
-        
+
         /*AJAX (assyncronous javascript and XML)
         
         É uma tecnica de comunicação de Transmição/recebimento de dados que permite o processamento em conjunto com APIs (ou Wen Services)
@@ -77,4 +77,35 @@ botaoBuscar.addEventListener("click", async function(event){
 
     }
 })
+
+/*######################  SCRIPT DO FORMSPREE  #######################*/
+    
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("status-do-envio");
+      var data = new FormData(event.target);
+      fetch(event.target.action, {
+        method: formulario.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          status.innerHTML = "Obrigado pelo envio!";
+          formulario.reset()
+        } else {
+          response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+              status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+            } else {
+              status.innerHTML = "Oops! Detectamos um problema, tente novamente!"
+            }
+          })
+        }
+      }).catch(error => {
+        status.innerHTML = "Oops! Detectamos um problema, tente novamente!"
+      });
+    }
+    formulario.addEventListener("submit", handleSubmit)
 

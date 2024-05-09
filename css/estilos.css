@@ -400,6 +400,14 @@ button:hover, button:focus {
     display: none;
 }
 
+#status-do-envio{
+    /* background-color: #4d4d4d8f; */
+    color: #2b2b2b;
+    text-shadow: #3a3a3afb 1px 1px 3px;
+    font-weight: bold;
+    text-align: center;
+}
+
 
 
 
