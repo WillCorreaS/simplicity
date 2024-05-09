@@ -12,6 +12,14 @@ const campoEstado = document.querySelector("#estado");
 const botaoBuscar = document.querySelector("#buscar");
 const mensagemStatus = document.querySelector("#status");
 const mensagem = document.querySelector("#mensagem");
+const campoTelefone = document.querySelector("#telefone");
+
+
+
+// Selecionando campos com jQuery e ativar mascara
+$(campoCep).mask("00000-000"); //12345-678
+$(campoTelefone).mask("(00) 0000-0000"); // (11) 1234-5678
+
 
 
 // Detectando quando o botão CEP for acionado
@@ -23,7 +31,7 @@ botaoBuscar.addEventListener("click", async function(event){
     let cepInformado;
 
     //para verificar se CEP contém 8 digitos
-    if (campoCep.value.length !== 8) {
+    if (campoCep.value.length !== 9) {
         mensagemStatus.textContent = "Digite um CEP válido"
         mensagemStatus.style.color = "purple"
         return;
