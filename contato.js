@@ -37,6 +37,7 @@ botaoBuscar.addEventListener("click", async function(event){
         return;
     } else{
         cepInformado = campoCep.value;
+        
         /*AJAX (assyncronous javascript and XML)
         
         É uma tecnica de comunicação de Transmição/recebimento de dados que permite o processamento em conjunto com APIs (ou Wen Services)
