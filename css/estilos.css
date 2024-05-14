@@ -129,7 +129,7 @@ nav h2 a:hover, nav h2 a:focus, .links-menu a:hover, .links-menu a:focus{
 
 .destaque {
     height: 88vh;
-    background-image: url(/imagens/fundo-destaque.jpg);
+    background-image: url(../imagens/fundo-destaque.jpg);
     background-attachment: fixed;
     display: flex;
     flex-direction: column;
@@ -195,7 +195,7 @@ address {
 }
 
 .historia {
-    background-image: url(/imagens/fundo-madeira.jpg);
+    background-image: url(../imagens/fundo-madeira.jpg);
     background-attachment: fixed;
     background-size: cover;
     height: 80vh;
